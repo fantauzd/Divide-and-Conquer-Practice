@@ -13,14 +13,14 @@ def merge_sort(arr, start, end):
         mid = (start + end)//2
         merge_sort(arr, start, mid)
         merge_sort(arr, mid+1, end)
-    merge(arr, start, mid, end)
+        merge(arr, start, mid, end)
 
 def merge(arr, start, mid, end):
     """
     Merges subarray from start to mid and from mid+1 to end back together in sorted order.
     """
     # temporary arrays to copy elements into subarray
-    left_array = [0] * (start - mid) + 1
+    left_array = [0] * ((start - mid) + 1)
     right_array = [0] * (end - mid)
     for i in range(0, (start - mid) + 1):
         left_array[i] = arr[start + i]
@@ -44,7 +44,7 @@ def merge(arr, start, mid, end):
         i += 1
         k += 1
 
-    while i < (end - mid):
+    while j < (end - mid):
         arr[k] = right_array[j]
         j += 1
         k += 1
