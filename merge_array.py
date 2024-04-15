@@ -13,7 +13,6 @@ def merge_sort(arr, start, end):
         mid = (start + end)//2
         merge_sort(arr, start, mid)
         merge_sort(arr, mid+1, end)
-
     merge(arr, start, mid, end)
 
 def merge(arr, start, mid, end):
@@ -50,3 +49,7 @@ def merge(arr, start, mid, end):
         j += 1
         k += 1
 
+if __name__ == '__main__':
+  Arr = [2,14,1,9,10,5,6,18,11]
+  merge_sort(Arr, 0, 8)
+  print(Arr)
