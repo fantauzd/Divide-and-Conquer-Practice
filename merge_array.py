@@ -14,6 +14,7 @@ def merge_sort(arr, start, end):
         merge_sort(arr, start, mid)
         merge_sort(arr, mid+1, end)
 
+    merge(arr, start, mid, end)
 
 def merge(arr, start, mid, end):
     """
