@@ -39,6 +39,7 @@ def kth_helper(Arr1, i, Arr2, j, k):
         return kth_helper(Arr1, i+1, Arr2, j, k-1)
     if i >= len(Arr1):
         return kth_helper(Arr1, i, Arr2, j+1, k-1)
+    # otherwise examine subarray of array with the smallest element
     if Arr1[i] > Arr2[j]:
         return kth_helper(Arr1, i, Arr2, j + 1, k - 1)
     return kth_helper(Arr1, i + 1, Arr2, j, k - 1)
