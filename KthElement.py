@@ -47,6 +47,6 @@ def kth_helper(Arr1, i, Arr2, j, k):
 if __name__ == '__main__':
   Arr1 = [1,2,3,5,6]
   Arr2= [3,4,5,6,7]
-  k= 8
+  k= 5
   print(kthElement(Arr1, Arr2, k))
 
