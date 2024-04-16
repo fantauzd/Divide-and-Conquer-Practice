@@ -8,4 +8,11 @@ def search(numArr, key):
     :param key: number
     :return: index if key is found, else -1
     """
+    return search_helper(numArr, 0, len(numArr) - 1, key)
+
+
+def search_helper(numArr, start, end, key):
+    """
+    search helper function.
+    """
 
