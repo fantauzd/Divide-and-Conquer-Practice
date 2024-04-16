@@ -16,15 +16,15 @@ def search_helper(numArr, start, end, key):
     search helper function.
     """
     if start <= end:
-        mid = (end + start) //2
+        mid = (end + start) // 2
         if numArr[mid] == key:
-            return start + mid
+            return mid
 
         if numArr[mid] > key:
-            search_helper(numArr, start, mid-1, key)
+            return search_helper(numArr, start, mid-1, key)
 
         if numArr[mid] < key:
-            search_helper(numArr, mid+1, end, key)
+            return search_helper(numArr, mid+1, end, key)
 
     return -1
 
