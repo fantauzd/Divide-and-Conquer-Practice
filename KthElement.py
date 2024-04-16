@@ -22,3 +22,22 @@ def kth_helper(Arr1, i, Arr2, j, k):
     :param i: the first index being considered in Arr1
     :param j: the first index being considered in Arr2
     """
+    # when we reach base case, return element at kth position
+    if k == 0:
+        # if we reached the end of an array, the next element comes from remaining array
+        if j >= Arr2.length():
+            return Arr1[i]
+        if i >= Arr1.length():
+            return Arr2[j]
+        # otherwise return next smallest element
+        if Arr1[i] > Arr2[j]:
+            return Arr2[j]
+        return Arr1[i]
+    # if we reached the end of an array, we examine a subarray of the remaining array
+    if j >= Arr2. length():
+        return kth_helper(Arr1, i+1, Arr2, j, k-1)
+    if i >= Arr1. length():
+        return kth_helper(Arr1, i, Arr2, j+1, k-1)
+    if Arr1[i] > Arr2[j]:
+        return kth_helper(Arr1, i, Arr2, j + 1, k - 1)
+    return kth_helper(Arr1, i + 1, Arr2, j, k - 1)
